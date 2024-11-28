@@ -172,6 +172,13 @@ public class ArrCharOps {
                 return 1;
             }
         }
+
+        if (str1.length() < str2.length()) {
+            return -1;
+        } else if (str1.length() > str2.length()) {
+            return 1;
+        }
+        
         return 0;
     }
 }
