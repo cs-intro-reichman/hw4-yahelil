@@ -3,7 +3,7 @@ import java.util.Arrays;
 public class Primes {
     public static void main(String[] args) {
         final int N = Integer.parseInt(args[0]);
-        boolean[] arr = new boolean[N-2];
+        boolean[] arr = new boolean[N-1];
         Arrays.fill(arr,true);
         check_all_primes(arr);
         System.out.println("Prime numbers up to " + N + ":");
@@ -24,6 +24,9 @@ public class Primes {
         for(int i = 0; i<Math.sqrt(arr.length+2); i++){
             for(int j = i+1; j<arr.length; j++){
                 if ((j+2) % (i+2) == 0){
+                    System.out.println((j+2));
+                    System.out.println((i+2));
+
                     arr[j] = false;
                 }
             }
