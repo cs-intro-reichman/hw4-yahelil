@@ -23,7 +23,6 @@ public class MyString {
             char c = str.charAt(i);
             if (c >= 'A' && c <= 'Z'){
                 string.setCharAt(i, (char) (c+32));
-                System.out.println(str.charAt(i));
             }
         }
         return string.toString();
