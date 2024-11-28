@@ -125,16 +125,17 @@ public class ArrCharOps {
      *  The hash value of an empty array is zero.
      */
     public static long hashCode(char[] arr) {
-        if (arr.length == 0){
+        if (arr.length == 0) {
             return 0;
         }
         int n = arr.length;
-        int hash_code = 0;
-        for (int i = 0; i<n; i++){
-            hash_code += arr[i] * (7 ^ n-(i+1));
+        long hash_code = 0;
+        for (int i = 0; i < n; i++) {
+            hash_code += arr[i] * Math.pow(7, n - (i + 1));
         }
-        return 0;
+        return hash_code;
     }
+    
 
     /**
      * Compares the two strings lexicographically.
