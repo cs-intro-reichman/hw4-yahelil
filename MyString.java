@@ -52,10 +52,10 @@ public class MyString {
                 }
             }
             if (j == len2) {
-                return true; // Found a match
+                return true;
             }
         }
     
-        return false; // No match found
+        return false;
     }
 }
